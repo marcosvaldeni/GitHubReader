@@ -4,6 +4,16 @@ module.exports = {
     "plugin:prettier/recommended",
     "prettier/react"
   ],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+        "jsx": true,
+        "modules": true,
+        "experimentalObjectRestSpread": true
+    }
+  },
   "env": {
     "browser": true,
     "commonjs": true,
@@ -12,6 +22,7 @@ module.exports = {
     "node": true
   },
   "rules": {
+    "react/state-in-constructor": ["off"],
     "import/prefer-default-export": ["off"],
     "jsx-a11y/href-no-hash": ["off"],
     "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
